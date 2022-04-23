@@ -1,0 +1,100 @@
+.container {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  padding-inline: 1rem;
+}
+
+.container header {
+  z-index: 1000;
+  width: 100%;
+  background-color: var(--bg-light);
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid #393c49;
+  margin-bottom: 4rem;
+}
+
+.title_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input_container {
+  width: 22rem;
+  height: 4rem;
+  position: relative;
+}
+
+.input_container span {
+  position: absolute;
+  top: 1rem;
+  left: 0.8rem;
+}
+
+.title .date {
+  color: var(--tx-grey-light);
+  font-size: var(--fs-xsm);
+}
+.container input {
+  background-color: var(--bg-input);
+  border: 1px solid var(--input-border);
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 100%;
+  height: 4rem;
+  font-size: var(--fs-sm);
+  padding-left: 3.3rem;
+}
+
+.container input:focus {
+  color: var(--tx-light);
+  outline: none;
+  border: 2px solid var(--tx-grey-light);
+}
+
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.container::-webkit-scrollbar-track {
+  background: var(--bg-lighter);
+  border-radius: 16px;
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+  background: var(--bg-dark);
+  border-radius: 16px;
+}
+
+/* Handle on hover */
+.container::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-dark);
+}
+
+.categories ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+  margin-top: 1rem;
+  position: relative;
+  bottom: 0;
+}
+
+.categories ul li {
+  border-bottom: 3px solid transparent;
+}
+.categories ul li:hover {
+  border-bottom: 3px solid var(--primary-orange);
+}
+
+#activeCategorie {
+  color: var(--primary-orange);
+  border-bottom: 3px solid var(--primary-orange);
+}

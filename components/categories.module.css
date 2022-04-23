@@ -1,0 +1,21 @@
+.categories ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+  /* margin-top: 1rem; */
+  position: relative;
+  bottom: 0;
+}
+
+.categories ul li {
+  border-bottom: 3px solid transparent;
+}
+.categories ul li:hover {
+  border-bottom: 3px solid var(--primary-orange);
+}
+
+#activeCategorie {
+  color: var(--primary-orange);
+  border-bottom: 3px solid var(--primary-orange);
+}
