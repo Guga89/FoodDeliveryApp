@@ -1,0 +1,18 @@
+.container {
+  background-color: var(--bg-light);
+  width: 1194px;
+  height: 97vh;
+  margin-inline: auto;
+  border-radius: 1rem;
+  display: flex;
+  position: relative;
+}
+.container .content {
+  padding: 2.4rem 1.4rem 2.4rem 2.4rem;
+}
+
+.content {
+  width: 100%;
+  padding-inline: 1rem;
+  position: relative;
+}

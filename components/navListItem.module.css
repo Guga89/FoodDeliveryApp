@@ -1,0 +1,114 @@
+.a_wrapper {
+  position: relative;
+  text-decoration: none;
+  color: var(--tx-light);
+  border-top-left-radius: 1.6rem;
+  border-bottom-left-radius: 1.6rem;
+}
+
+.a_wrapper b:nth-child(1) {
+  position: absolute;
+  top: -80px;
+  height: 80px;
+  width: 100%;
+  background-color: var(--bg-light);
+  display: none;
+}
+
+.a_wrapper b:nth-child(1)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom-right-radius: 1.6rem;
+  background-color: var(--bg-dark);
+}
+
+.a_wrapper b:nth-child(2) {
+  position: absolute;
+  bottom: -80px;
+  height: 80px;
+  width: 100%;
+  background-color: var(--bg-light);
+  display: none;
+}
+
+.a_wrapper b:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 1.6rem;
+  background-color: var(--bg-dark);
+}
+
+/* .a_wrapper.active b:nth-child(1),
+.a_wrapper.active b:nth-child(2) {
+  display: block;
+} */
+
+.a_wrapper.active {
+  background-color: var(--bg-light);
+}
+
+.a_wrapper.active .navItemContainer {
+  color: var(--primary-orange);
+}
+.a_wrapper.active .navItemContainer:hover {
+  color: var(--primary-orange);
+}
+
+.navItemContainer {
+  display: flex;
+  place-items: center;
+  height: 80px;
+  padding-left: 1rem;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.title {
+  white-space: nowrap;
+}
+.title:hover {
+  transform: scale(1.1);
+  color: var(--primary-orange);
+}
+
+.navButton {
+  min-width: 6rem;
+  min-height: 6rem;
+  border-radius: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--m-28);
+  transition: all 0.3s;
+}
+
+.navButton:hover {
+  transform: scale(1.1);
+  border: 1px solid var(--primary-orange);
+  color: var(--primary-orange);
+}
+
+.activeButton {
+  color: var(--tx-light);
+  background-color: var(--primary-orange);
+  color: var(--tx-light);
+}
+
+.activeButton:hover {
+  color: var(--tx-light);
+}
+
+/* .active {
+  background-color: var(--bg-light);
+  color: var(--primary-orange);
+  border-bottom-left-radius: 1.6rem;
+  border-top-left-radius: 1.6rem;
+} */

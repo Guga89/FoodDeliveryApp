@@ -1,0 +1,42 @@
+.container {
+  background-color: var(--bg-light);
+  width: 1194px;
+  height: 97vh;
+  margin-inline: auto;
+  border-radius: 1rem;
+  display: flex;
+  position: relative;
+}
+.container .content {
+  width: 100%;
+  position: relative;
+  padding: 2.4rem;
+}
+
+.navbar {
+  width: 12rem;
+  height: 100%;
+  background-color: var(--bg-dark);
+  transition: 0.5s;
+  overflow-x: hidden;
+  padding: 0;
+  border-radius: 1.6rem;
+  padding: var(--p-28) 0 var(--p-28) 1.8rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.logo {
+  width: 100%;
+  padding-left: 1rem;
+  padding-bottom: 2.4rem;
+}
+
+.navbarList {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+}

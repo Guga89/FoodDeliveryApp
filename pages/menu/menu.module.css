@@ -1,0 +1,28 @@
+.container {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  padding-inline: 1rem;
+}
+
+.container::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.container::-webkit-scrollbar-track {
+  background: var(--bg-lighter);
+  border-radius: 16px;
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+  background: var(--bg-dark);
+  border-radius: 16px;
+}
+
+/* Handle on hover */
+.container::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-dark);
+}
