@@ -18,13 +18,15 @@
 
 /* Handle */
 .container::-webkit-scrollbar-thumb {
-  background: var(--bg-dark);
+  background: var(--bg-light);
   border-radius: 16px;
+  border: 1px solid var(--input-border);
 }
 
 /* Handle on hover */
 .container::-webkit-scrollbar-thumb:hover {
   background: var(--bg-dark);
+  border: 1px solid var(--primary-orange-transp);
 }
 
 .wrapper {

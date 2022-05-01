@@ -1,15 +1,9 @@
 {
   "menuList": [
     {
-      "id": "52767",
-      "img": "https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg",
-      "name": "Bakewell tart",
-      "price": 10
-    },
-    {
       "id": "52792",
       "img": "https://www.themealdb.com/images/media/meals/xqwwpy1483908697.jpg",
-      "name": "Bread and Butter Pudding",
+      "name": "Bread and Butter Updated",
       "price": 10
     },
     {
@@ -104,7 +98,6 @@
     },
     {
       "categorie": "grill",
-
       "id": "52894",
       "img": "https://www.themealdb.com/images/media/meals/ywwrsp1511720277.jpg",
       "name": "Battenberg Cake",
@@ -179,7 +172,7 @@
     {
       "id": "52997",
       "img": "https://www.themealdb.com/images/media/meals/z0ageb1583189517.jpg",
-      "name": "Beef Banh Mi Bowls with Sriracha Mayo, Carrot & Pickled Cucumber",
+      "name": "Beef Banh Mi Bowls with Sriracha",
       "price": 10
     },
     {
@@ -211,6 +204,109 @@
       "img": "https://www.themealdb.com/images/media/meals/tkxquw1628771028.jpg",
       "name": "Burek",
       "price": 10
+    },
+    {
+      "name": "New Product",
+      "price": "23",
+      "img": "https://cmx.weightwatchers.com/assets-proxy/weight-watchers/image/upload/v1594406683/visitor-site/prod/ca/burgers_masthead_xtkxft",
+      "id": "56c416b6-4dfb-4de0-97f8-306760ce20e1"
+    },
+    {
+      "name": "Another new product",
+      "price": "123",
+      "img": "https://tse1-mm.cn.bing.net/th/id/OIP-C.xb0aZE4_H4KhsoM93p0zsgHaJX?pid=ImgDet&rs=1",
+      "id": "79a8347f-2021-417b-8e2e-64c6d31355cd"
+    },
+    {
+      "name": "Some new product",
+      "price": "23",
+      "img": "https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg",
+      "id": "f5964f49-adaf-48f6-a1dd-8bec52b0b93d"
+    },
+    {
+      "name": "New product ",
+      "price": "34",
+      "img": "https://tse1-mm.cn.bing.net/th/id/OIP-C.xb0aZE4_H4KhsoM93p0zsgHaJX?pid=ImgDet&rs=1",
+      "id": "66be0e92-6b5d-4722-b7a7-db9abbae3aeb"
+    },
+    {
+      "name": "spinner test",
+      "price": "234",
+      "img": "https://tse1-mm.cn.bing.net/th/id/OIP-C.xb0aZE4_H4KhsoM93p0zsgHaJX?pid=ImgDet&rs=1",
+      "id": "c2858a7a-caf5-4bc1-8a6a-11a1b56e85b8"
+    },
+    {
+      "name": "New Product",
+      "price": "",
+      "img": "https://tse1-mm.cn.bing.net/th/id/OIP-C.xb0aZE4_H4KhsoM93p0zsgHaJX?pid=ImgDet&rs=1",
+      "id": "9547fc26-45cd-4c0d-88e0-9438f5774222"
+    },
+    {
+      "name": "Guga",
+      "price": "23",
+      "img": "https://cmx.weightwatchers.com/assets-proxy/weight-watchers/image/upload/v1594406683/visitor-site/prod/ca/burgers_masthead_xtkxft",
+      "id": "ba5d2814-fc5d-49e9-957d-3ce9634c1775"
+    },
+    {
+      "name": "Guga",
+      "price": "23",
+      "img": "https://cmx.weightwatchers.com/assets-proxy/weight-watchers/image/upload/v1594406683/visitor-site/prod/ca/burgers_masthead_xtkxft",
+      "id": "eb00be82-ab1a-402d-98bf-5febd9739bc8"
+    },
+    {
+      "name": "Guga",
+      "price": "23",
+      "img": "https://cmx.weightwatchers.com/assets-proxy/weight-watchers/image/upload/v1594406683/visitor-site/prod/ca/burgers_masthead_xtkxft",
+      "id": "13ce1f8a-24bf-41c7-9cbb-fc2eb0a73175"
+    },
+    {
+      "name": "New Product",
+      "price": "2",
+      "img": "https://cmx.weightwatchers.com/assets-proxy/weight-watchers/image/upload/v1594406683/visitor-site/prod/ca/burgers_masthead_xtkxft",
+      "id": "2cbd59f8-038c-417d-b5de-770c4f3fb033"
+    },
+    {
+      "name": "New Product",
+      "price": "2",
+      "img": "https://cmx.weightwatchers.com/assets-proxy/weight-watchers/image/upload/v1594406683/visitor-site/prod/ca/burgers_masthead_xtkxft",
+      "id": "e4dfdce8-1079-446d-9dc5-229f3e8128f8"
+    },
+    {
+      "name": "New Product",
+      "price": "2",
+      "img": "https://cmx.weightwatchers.com/assets-proxy/weight-watchers/image/upload/v1594406683/visitor-site/prod/ca/burgers_masthead_xtkxft",
+      "id": "e3ee1a7f-c2b6-4636-a7b0-c4f6f72d70f2"
+    },
+    {
+      "name": "New Product",
+      "price": "2",
+      "img": "https://tse1-mm.cn.bing.net/th/id/OIP-C.xb0aZE4_H4KhsoM93p0zsgHaJX?pid=ImgDet&rs=1",
+      "id": "47083407-8bff-4ef0-8b1f-be410e5c1b5f"
+    },
+    {
+      "name": "pushing back to settings",
+      "price": "23",
+      "img": "https://cmx.weightwatchers.com/assets-proxy/weight-watchers/image/upload/v1594406683/visitor-site/prod/ca/burgers_masthead_xtkxft",
+      "id": "b48555c5-5e3c-4675-9017-895eb52ca3e5"
+    },
+    {
+      "name": "newly added and update product",
+      "price": "111",
+      "img": "https://cmx.weightwatchers.com/assets-proxy/weight-watchers/image/upload/v1594406683/visitor-site/prod/ca/burgers_masthead_xtkxft",
+      "id": "7d3da802-55ee-4791-b4e5-8c7803c73113"
+    },
+    {
+      "name": "Baba Ganoush",
+      "price": "15",
+      "img": "https://images.unsplash.com/photo-1627308595127-d9acf19107ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80",
+      "id": "95cfa55a-d707-4346-936f-eff515123d33"
+    },
+    {
+      "name": "Product to MondoDB",
+      "price": "123",
+      "img": "https://images.unsplash.com/photo-1627308595127-d9acf19107ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80",
+      "id": "e03d2d20-846f-486c-87c2-639d36a10b3f",
+      "_id": "626d651f8edd4d2b4cd37096"
     }
   ]
 }

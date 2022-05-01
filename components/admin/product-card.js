@@ -6,7 +6,11 @@ const ProductCard = (props) => {
   const { item } = props;
   const { edit } = useIcons();
   return (
-    <div onClick={props.editProduct(item.id)}>
+    <div
+      onClick={() => {
+        props.onClick(item.id);
+      }}
+    >
       <li>
         <div className={styles.card_container}>
           {/* <div className={styles.cardImg}>

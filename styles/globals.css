@@ -155,19 +155,22 @@ select {
   border: 1px solid var(--primary-orange);
   background-color: transparent;
   color: var(--primary-orange);
+  padding-inline: 1rem;
 }
 
 .btn-primary {
   background-color: var(--primary-orange);
   color: var(--tx-light);
+  padding-inline: 1rem;
+  border: none;
 }
 
 .btn:hover,
 .btn-primary:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
-.input {
+input {
   background-color: var(--bg-input);
   border: 1px solid var(--input-border);
   box-sizing: border-box;
@@ -176,10 +179,22 @@ select {
   font-size: var(--fs-sm);
   padding-inline: var(--p-10);
   transition: all 1s;
+  color: var(--tx-light);
 }
 
-.input:focus {
+input:focus {
   color: var(--tx-light);
   outline: none;
   border: 2px solid var(--primary-orange);
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: inner-spin-button !important;
+  width: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: var(--primary-orange-transp);
 }

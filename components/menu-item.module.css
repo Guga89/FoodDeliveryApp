@@ -21,6 +21,7 @@
 
 .cardImg {
   width: 65%;
+  aspect-ratio: 1/1;
   border-radius: 50%;
   margin-bottom: 1.5rem;
   box-shadow: 1px 1px 10px 1px var(--primary-orange);
