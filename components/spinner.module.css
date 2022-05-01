@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  z-index: 20000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 10rem;
+  height: 10rem;
+  background-color: rgba(33, 32, 43, 0.8);
+  backdrop-filter: blur(2px);
+  border-radius: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 35%;
+  height: 35%;
+  border: 0.5rem solid var(--primary-orange);
+  border-radius: 50%;
+  border-left: 0.5rem solid transparent;
+  animation: rotation 3s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

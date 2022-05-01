@@ -1,0 +1,20 @@
+.container {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 30rem;
+  position: relative;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+.inputContainer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}

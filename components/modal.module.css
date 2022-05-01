@@ -1,0 +1,52 @@
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.6rem;
+}
+
+.closeModal {
+  display: none;
+}
+
+.modal {
+  max-width: 50%;
+  max-height: 70%;
+  background-color: var(--bg-dark);
+  border-radius: 1.6rem;
+  padding: var(--p-28);
+  box-shadow: 1px 1px 20px 1px rgb(0, 0, 0);
+  position: relative;
+}
+
+.cancelIcon {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+}
+
+.one,
+.two {
+  width: 2rem;
+  border: 1px solid var(--primary-orange-transp);
+  position: absolute;
+}
+
+.one {
+  transform: rotate(45deg);
+}
+.two {
+  transform: rotate(135deg);
+}
+
+.cancelIcon:hover > * {
+  border: 1px solid var(--primary-orange);
+}
