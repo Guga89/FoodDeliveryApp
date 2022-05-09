@@ -1,5 +1,7 @@
 import Header from '../../../components/header';
 import Layout from '../../../components/layout';
+import { MongoClient, ObjectId } from 'mongodb';
+
 // import styles from './menuItem.module.css';
 
 const MenuItem = (props) => {
@@ -13,35 +15,38 @@ const MenuItem = (props) => {
   );
 };
 
-async function getData() {
-  const res = await fetch('http://localhost:8000/menuList');
-  const data = await res.json();
-  return data;
-}
-
 export async function getStaticProps(context) {
   const itemID = context.params.menuItem;
-  const data = await getData();
-  const item = data.find((item) => {
-    return item.id === itemID;
-  });
+
+  const client = await MongoClient.connect(
+    'mongodb+srv://admin:DDumc4GoOlnhokjL@cluster2022.rom5c.mongodb.net/foodDeliveryApp?retryWrites=true&w=majority'
+  );
+  const productsCollection = client.db().collection('products');
+
+  const item = await productsCollection.findOne({ _id: new ObjectId(itemID) });
 
   return {
     props: {
-      item: item,
+      item: JSON.parse(JSON.stringify(item)),
     },
   };
 }
 
 export async function getStaticPaths() {
-  const data = await getData();
+  const client = await MongoClient.connect(
+    'mongodb+srv://admin:DDumc4GoOlnhokjL@cluster2022.rom5c.mongodb.net/foodDeliveryApp?retryWrites=true&w=majority'
+  );
+  const db = client.db();
+  const data = await db.collection('products').find({}).toArray();
+
   const params = data.map((item) => {
     return {
       params: {
-        menuItem: item.id,
+        menuItem: item._id.toString(),
       },
     };
   });
+
   return {
     paths: params,
     fallback: false,

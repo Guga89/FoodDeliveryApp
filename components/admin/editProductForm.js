@@ -28,7 +28,7 @@ const EditProductForm = (props) => {
     e.preventDefault();
     props.spinnerToggle(true);
 
-    const res = await fetch(`/api/product/${editedProduct.id}`, {
+    const res = await fetch(`/api/product/${editedProduct._id}`, {
       method: 'PUT',
       body: JSON.stringify(editedProduct),
       headers: {
@@ -47,19 +47,20 @@ const EditProductForm = (props) => {
     e.preventDefault();
     props.spinnerToggle(true);
     const confirm = prompt(
-      'Type "Y" if you sure you want to delete this product?'
+      'Type "y" if you sure you want to delete this product?'
     );
 
-    if (confirm === 'Y') {
-      const res = await fetch(`/api/product/${editedProduct.id}`, {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      const data = await res.json();
-      console.log(data);
-      alert(`${editedProduct.name} is deleted...`);
+    if (confirm === 'y') {
+      try {
+        const res = await fetch(`/api/product/${editedProduct._id}`, {
+          method: 'DELETE',
+        });
+        const data = await res.json();
+        await console.log(data);
+        alert(`${editedProduct.name} is deleted...`);
+      } catch (error) {
+        console.log(error);
+      }
 
       props.spinnerToggle(false);
       props.modalHandlerClose();

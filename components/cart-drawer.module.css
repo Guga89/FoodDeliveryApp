@@ -1,0 +1,66 @@
+.container {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  width: 100%;
+  height: 100%;
+  z-index: 30000;
+  position: absolute;
+  right: 0;
+  border-radius: 1.6rem;
+}
+
+.cart {
+  width: 33%;
+  height: 100%;
+  background-color: var(--bg-dark);
+  border-top-left-radius: 1.6rem;
+  border-bottom-left-radius: 1.6rem;
+  float: right;
+  padding: var(--p-28);
+  overflow: hidden;
+}
+
+.cartForm .orderTypeGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 1.6rem;
+}
+
+.inputLabel {
+  border: 1px solid var(--input-border);
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 33%;
+  text-align: center;
+  margin-inline: 0.5rem;
+  transition: all 0.3s;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputLabel:hover {
+  border: 1px solid var(--primary-orange);
+  color: var(--primary-orange);
+}
+
+.active {
+  background-color: var(--primary-orange);
+  border: none;
+  color: white;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.active:hover {
+  color: white;
+  border: none;
+}
+
+.inputLabel > input {
+  opacity: 0;
+  position: absolute;
+}

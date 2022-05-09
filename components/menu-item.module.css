@@ -7,6 +7,8 @@
 
 .card:hover {
   transform: scale(1.05);
+  /* border: 1px solid var(--primary-orange); */
+  box-shadow: 1px 1px 15px 1px rgb(0, 0, 0);
 }
 
 .card_container {

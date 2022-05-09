@@ -112,8 +112,8 @@ const useIcons = () => {
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="30"
-        height="30"
+        width="23"
+        height="25"
         fill="currentColor"
         className="bi bi-trash"
         viewBox="0 0 16 16"
@@ -269,7 +269,7 @@ const useIcons = () => {
     ),
   };
   const home2 = {
-    link: '/',
+    link: '/home',
     name: 'Home',
     icon: (
       <svg

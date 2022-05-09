@@ -8,7 +8,7 @@ const ProductCard = (props) => {
   return (
     <div
       onClick={() => {
-        props.onClick(item.id);
+        props.onClick(item._id);
       }}
     >
       <li>

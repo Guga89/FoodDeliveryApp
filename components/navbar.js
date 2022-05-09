@@ -6,7 +6,7 @@ import { useState } from 'react';
 const Navbar = () => {
   const { home2, menu, takeAway, account, notification, signOut } = useIcons();
 
-  const navList = [home2, menu, takeAway, account, notification, signOut];
+  // const navList = [home2, menu, takeAway, account, notification, signOut];
 
   const [shrinked, setShrinked] = useState(true);
 
@@ -23,10 +23,16 @@ const Navbar = () => {
           <img src="/icon/Logo.svg" alt="" />
         </div>
 
-        {navList.map((item, index) => {
+        {/* {navList.map((item, index) => {
           item.isActive = false;
           return <NavListItem navItem={item} key={index} index={index} />;
-        })}
+        })} */}
+        <NavListItem navItem={home2} link={'/home'} />
+        <NavListItem navItem={menu} link={'/menu'} />
+        <NavListItem navItem={takeAway} link={'/takeAway'} />
+        <NavListItem navItem={account} link={'/account'} />
+        <NavListItem navItem={notification} link={'/notification'} />
+        <NavListItem navItem={signOut} link={'/signOut'} />
       </ul>
       <button className={styles.expandBtn} onClick={navLengthToggler}>
         &gt;

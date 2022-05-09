@@ -9,8 +9,7 @@ const NavListItem = (props) => {
     <Link href={props.navItem.link}>
       <a
         className={
-          currentPath === props.navItem.link ||
-          currentPath.includes(props.navItem.link)
+          currentPath === props.link || currentPath.includes(props.link)
             ? styles.a_wrapper + ' ' + styles.active
             : styles.a_wrapper
         }
@@ -19,16 +18,14 @@ const NavListItem = (props) => {
         <b></b>
         <div
           className={
-            currentPath === props.navItem.link ||
-            currentPath.includes(props.navItem.link)
+            currentPath === props.link || currentPath.includes(props.link)
               ? styles.navItemContainer + ' ' + styles.active
               : styles.navItemContainer
           }
         >
           <span
             className={
-              currentPath === props.navItem.link ||
-              currentPath.includes(props.navItem.link)
+              currentPath === props.link || currentPath.includes(props.link)
                 ? styles.navButton + ' ' + styles.activeButton
                 : styles.navButton
             }

@@ -1,5 +1,7 @@
 import useIcons from '../utils/useIcons';
 import styles from './header.module.css';
+import { useDispatch } from 'react-redux';
+import { openCart } from '../reduxStore/cartSlice';
 
 const Header = (props) => {
   const { search, cart } = useIcons();
@@ -10,6 +12,13 @@ const Header = (props) => {
     month: 'short',
     day: 'numeric',
   });
+
+  const dispatch = useDispatch();
+
+  const cartOpenHandler = () => {
+    dispatch(openCart());
+  };
+
   return (
     <header className={styles.container}>
       <div className={styles.header}>
@@ -22,7 +31,10 @@ const Header = (props) => {
             <i>{search.icon}</i>
             <input type="text" placeholder="Search for goodies..." />
           </div>
-          <button className={'btn btn-secondary' + ' ' + styles.cart}>
+          <button
+            className={'btn btn-secondary' + ' ' + styles.cart}
+            onClick={cartOpenHandler}
+          >
             {cart.icon}
           </button>
         </div>

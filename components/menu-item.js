@@ -5,7 +5,7 @@ import styles from './menu-item.module.css';
 const MenuItem = (props) => {
   const { item } = props;
   return (
-    <Link href={`/menu/${item.id}`}>
+    <Link href={`/menu/${item._id}`}>
       <a>
         <li>
           <div className={styles.card}>

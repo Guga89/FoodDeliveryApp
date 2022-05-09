@@ -1,17 +1,13 @@
-import Header from '../components/header';
-import Layout from '../components/layout';
-import styles from './home.module.css';
+// import { useRouter } from 'next/router';
+// import { useEffect } from 'react';
 
-export default function Home() {
-  return (
-    <Layout>
-      <div className={styles.container}>
-        <Header pageTitle="Welcome to Guga's" />
-        <p>
-          Here will be some carousel, bonus cards, new products, discounts etc
-          information
-        </p>
-      </div>
-    </Layout>
-  );
-}
+const IndexPage = () => {
+  //   useEffect(() => {
+  //     const router = useRouter();
+  //     router.push('/home');
+  //   }, []);
+
+  return <h1>Index page</h1>;
+};
+
+export default IndexPage;

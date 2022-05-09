@@ -4,6 +4,7 @@ import Categories from '../../../components/categories';
 import MenuList from '../../../components/menu-list';
 import { useState } from 'react';
 import styles from './product-management.module.css';
+import { MongoClient } from 'mongodb';
 
 const ProductManagement = (props) => {
   const [filter, setFilter] = useState('all');
@@ -28,12 +29,15 @@ const ProductManagement = (props) => {
 };
 
 export async function getStaticProps() {
-  const data = await fetch('http://localhost:8000/menuList');
-  const dataParsed = await data.json();
+  const client = await MongoClient.connect(
+    'mongodb+srv://admin:DDumc4GoOlnhokjL@cluster2022.rom5c.mongodb.net/foodDeliveryApp?retryWrites=true&w=majority'
+  );
+  const db = client.db();
+  const data = await db.collection('products').find({}).toArray();
 
   return {
     props: {
-      items: dataParsed,
+      items: JSON.parse(JSON.stringify(data)),
     },
   };
 }

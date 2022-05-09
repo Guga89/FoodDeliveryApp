@@ -1,0 +1,91 @@
+.card {
+  width: 100%;
+  padding-bottom: 1.6rem;
+  /* border-bottom: 1px solid var(--input-border); */
+  padding: 1rem;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  border-left: 1px solid transparent;
+}
+
+.card:hover {
+  /* background-color: var(--primary-orange-transp); */
+  border-left: 1px solid var(--primary-orange);
+  box-shadow: 1px 1px 10px 1px black;
+}
+
+.row1 {
+  display: grid;
+  grid-template-columns: 8fr 2fr 2fr;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.row1 div {
+  display: flex;
+  align-items: left;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 10fr 2fr;
+}
+
+.card img {
+  width: 5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.titleGroup p {
+  color: var(--tx-grey-light);
+  font-size: var(--fs-sm);
+}
+
+.qty {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bg-lighter);
+  margin-inline: auto;
+}
+
+.price {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.row2 input {
+  margin-right: 1rem;
+}
+
+.row2 button {
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: 1px solid var(--primary-orange-transp);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-orange-transp);
+  margin-inline: auto;
+  transition: all 0.3s;
+}
+
+.row2 button:hover {
+  cursor: pointer;
+  border: 1px solid var(--primary-orange);
+  color: var(--primary-orange);
+}

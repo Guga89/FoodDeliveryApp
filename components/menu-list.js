@@ -24,8 +24,8 @@ const MenuList = (props) => {
     setModalEdit(false);
   };
 
-  const editProductHandler = async (productID) => {
-    const res = await fetch(`/api/product/${productID}`);
+  const editProductHandler = async (id) => {
+    const res = await fetch(`/api/product/${id}`);
     const data = await res.json();
     // console.log(data);
     return data;
