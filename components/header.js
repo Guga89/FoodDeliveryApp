@@ -1,10 +1,11 @@
 import useIcons from '../utils/useIcons';
 import styles from './header.module.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { openCart } from '../reduxStore/cartSlice';
 
 const Header = (props) => {
   const { search, cart } = useIcons();
+  const cartItems = useSelector((state) => state.cart.cartItems);
 
   const date = new Date().toLocaleDateString('en-us', {
     weekday: 'long',
@@ -32,10 +33,17 @@ const Header = (props) => {
             <input type="text" placeholder="Search for goodies..." />
           </div>
           <button
-            className={'btn btn-secondary' + ' ' + styles.cart}
+            className={
+              cartItems.length === 0
+                ? 'btn btn-secondary' + ' ' + styles.cartDisabled
+                : 'btn btn-secondary' + ' ' + styles.cart
+            }
             onClick={cartOpenHandler}
           >
             {cart.icon}
+            {cartItems.length > 0 && (
+              <span className={styles.priceSum}>{cartItems.length}</span>
+            )}
           </button>
         </div>
       </div>

@@ -1,8 +1,15 @@
+import { useDispatch } from 'react-redux';
+import { clearAll, closeCart } from '../reduxStore/cartSlice';
 import CartItem from './cart-item';
 import styles from './cart-items.module.css';
 
 const CartItems = (props) => {
   const { items } = props;
+  const dispatch = useDispatch();
+  const clearCart = () => {
+    dispatch(clearAll());
+    dispatch(closeCart());
+  };
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -17,7 +24,9 @@ const CartItems = (props) => {
       </div>
       <div className={styles.footer}>
         <button className="btn btn-primary">Confirm address to continue</button>
-        <p>Total - 234$</p>
+        <button className={styles.clearAllBtn} onClick={clearCart}>
+          Clear All
+        </button>
       </div>
     </div>
   );

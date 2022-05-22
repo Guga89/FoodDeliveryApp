@@ -1,29 +1,13 @@
 import styles from './cart-drawer.module.css';
 import { useState } from 'react';
 import CartItems from './cart-items';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { closeCart } from '../reduxStore/cartSlice';
 
 const CartDrawer = () => {
   const dispatch = useDispatch();
-  const [cartItems, setCartItems] = useState([
-    {
-      _id: '13123',
-      name: 'Baba Ganoush',
-      price: 23,
-      note: 'Medium spicy',
-      qty: 2,
-      img: 'https://images.unsplash.com/photo-1627308595127-d9acf19107ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80',
-    },
-    {
-      _id: '13321',
-      name: 'Baba Ganoush',
-      price: 23,
-      note: 'Medium spicy',
-      qty: 2,
-      img: 'https://images.unsplash.com/photo-1627308595127-d9acf19107ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1335&q=80',
-    },
-  ]);
+  const cartItems = useSelector((state) => state.cart.cartItems);
+  const priceSum = useSelector((state) => state.cart.priceSum);
 
   const [orderType, setOrderType] = useState('dineIn');
 
@@ -32,13 +16,23 @@ const CartDrawer = () => {
     // console.log(orderType);
   };
 
-  const closeCartHander = () => {
+  const closeCartHander = (e) => {
+    e.stopPropagation();
     dispatch(closeCart());
   };
+
   return (
     <div className={styles.container} onClick={closeCartHander}>
-      <div className={styles.cart}>
-        <h2>Order #00001</h2>
+      <div
+        className={styles.cart}
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
+        <div className={styles.orderSum}>
+          <h2>Order</h2>
+          <h3> Total price - ${priceSum}</h3>
+        </div>
         <form className={styles.cartForm} onSubmit={formHandler}>
           <div className={styles.orderTypeGroup}>
             <label

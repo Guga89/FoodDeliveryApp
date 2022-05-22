@@ -55,8 +55,26 @@
 }
 
 .footer {
-  display: flex;
+  /* display: flex; */
   padding-top: 3rem;
-  justify-content: space-between;
-  align-items: center;
+}
+
+.footer button {
+  width: 100%;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.clearAllBtn {
+  background-color: transparent;
+  height: 4rem;
+  border-radius: 1.6rem;
+  border: 1px solid transparent;
+  color: var(--tx-grey-light);
+  transition: all 0.2s;
+}
+
+.clearAllBtn:hover {
+  border: 1px solid var(--primary-orange-transp);
+  color: var(--primary-orange);
 }

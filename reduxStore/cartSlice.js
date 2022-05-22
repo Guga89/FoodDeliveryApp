@@ -23,7 +23,7 @@ export const cartSlice = createSlice({
   reducers: {
     //========================= CART ADD ITEM =========================
     cartAddItem: (state, actions) => {
-      const updatedPriceSum = state.priceSum + actions.payload.price;
+      const updatedPriceSum = state.priceSum + Number(actions.payload.price);
       const newItem = actions.payload;
       const existingItemIndex = state.cartItems.findIndex(
         (item) => item._id === newItem._id
@@ -95,7 +95,7 @@ export const cartSlice = createSlice({
 
       state.cartItems = updatedCartItems;
       state.priceSum = updatedPriceSum;
-      console.log('Removed from cart!');
+      // console.log('Removed from cart!');
     },
 
     //==========================CLEAR ENTIRE CART ================================

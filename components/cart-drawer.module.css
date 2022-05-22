@@ -7,6 +7,7 @@
   position: absolute;
   right: 0;
   border-radius: 1.6rem;
+  overflow: hidden;
 }
 
 .cart {
@@ -18,8 +19,27 @@
   float: right;
   padding: var(--p-28);
   overflow: hidden;
+  animation: slideLeft 0.3s ease-in;
 }
 
+.orderSum {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderSum h3 {
+  color: var(--tx-grey-light);
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translate(100%, 0);
+  }
+  to {
+    transform: translate(0%, 0);
+  }
+}
 .cartForm .orderTypeGroup {
   display: flex;
   flex-direction: row;

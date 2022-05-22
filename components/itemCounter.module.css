@@ -1,0 +1,61 @@
+.container,
+.addButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem;
+  border: 1px solid var(--input-border);
+  border-radius: 1rem;
+  position: relative;
+}
+
+.addButton {
+  border: 1px solid var(--primary-orange);
+  color: var(--primary-orange);
+  transition: all 0.2s;
+  background-color: transparent;
+}
+.addButton:hover {
+  border: 1px solid transparent;
+  color: white;
+  background-color: var(--primary-orange);
+}
+
+/* .addBtn {
+  width: 40%;
+  border-radius: 1rem;
+  background-color: transparent;
+  color: var(--primary-orange);
+  border: 1px solid var(--primary-orange);
+}
+
+.addBtn:hover {
+  background-color: var(--primary-orange);
+  color: white;
+} */
+
+.minus,
+.plus,
+.counter {
+  width: 33%;
+  height: 100%;
+  text-align: center;
+}
+
+.minus:hover {
+  background-color: var(--primary-orange);
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.plus:hover {
+  background-color: var(--primary-orange);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.counter {
+  background-color: var(--bg-lighter);
+  height: 100%;
+}

@@ -7,7 +7,11 @@ const IndexPage = () => {
   //     router.push('/home');
   //   }, []);
 
-  return <h1>Index page</h1>;
+  return (
+    <div className="container">
+      <h1>Index Home page</h1>
+    </div>
+  );
 };
 
 export default IndexPage;

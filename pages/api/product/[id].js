@@ -18,7 +18,7 @@ const handler = async (req, res) => {
   }
 
   if (req.method === 'PUT') {
-    const editedProduct = req.body;
+    // const editedProduct = req.body;
     // const updateProduct = await fetch(
     //   `http://localhost:8000/menuList/${productID}`,
     //   {
@@ -32,13 +32,14 @@ const handler = async (req, res) => {
     // const updatedProduct = await updateProduct.json();
 
     try {
-      let data = req.body;
-      data = delete data._id;
-      const item = await productsCollection.findOneAndReplace(
+      let data = { ...req.body };
+      delete data._id;
+      console.log(data);
+      const item = await productsCollection.updateOne(
         {
           _id: new ObjectId(productID),
         },
-        { ...data }
+        { $set: { ...data } }
       );
       await console.log('from PUT api ', item);
       res.status(200).json({ message: 'Item updated!!!' });

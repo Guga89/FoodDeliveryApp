@@ -28,6 +28,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  z-index: 100;
 }
 
 .input_container {
@@ -65,4 +66,26 @@
 
 .cart {
   margin: -0.5rem 1.5rem 0 var(--p-28);
+  position: relative;
+  z-index: 1000;
+  cursor: pointer;
+}
+.cartDisabled {
+  margin: -0.5rem 1.5rem 0 var(--p-28);
+  position: relative;
+  z-index: 1000;
+  cursor: pointer;
+  color: var(--input-border);
+  border: 1px solid var(--input-border);
+}
+
+.priceSum {
+  width: 3rem;
+  aspect-ratio: 1 1;
+  background-color: var(--primary-orange);
+  border-radius: 1rem;
+  color: var(--tx-light);
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
 }
